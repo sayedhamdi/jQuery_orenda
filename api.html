@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery/jquery.js"></script>
+    <script>
+
+        //najem njib des donnés mel web? 
+        $(function(){
+            $.getJSON('https://jsonplaceholder.typicode.com/users', function(data) {
+                const users = data;
+               console.log(users[9].address) 
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello</h1>
+    </div>   
+    <button id="but1">#but1</button>
+</body>
+</html>
+
+<!--
+
+
+
+
+
+
+
+<script>
+    var request = new XMLHttpRequest();
+    request.open('GET', '/my/url', true);
+
+    request.onload = function() {
+    if (this.status >= 200 && this.status < 400) {
+        // Success!
+        var data = JSON.parse(this.response);
+    } else {
+        // We reached our target server, but it returned an error
+
+    }
+    };
+
+    request.onerror = function() {
+    // There was a connection error of some sort
+    };
+    request.send();
+</script>
+
+
+
+
+
+
+
+<script>
+    //post request
+    $.ajax({
+    type: 'POST',
+    url: '/my/url',
+    data: data
+    });
+</script>
+
+<script>
+    //bel javascript 
+    var request = new XMLHttpRequest();
+    request.open('POST', '/my/url', true);
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    request.send(data);
+</script>
+-->

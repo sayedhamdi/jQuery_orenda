@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .body{
+            display:flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+        }
+        .panels ,.buttons {
+            display:flex;
+            justify-content: center;
+            margin:30px 0;
+        }
+        .panels div{
+            width:20vw;
+            height:10vw;
+            border:5px solid grey;
+            margin:2px;
+            background:blue;
+            color:white;
+        }
+    </style>
+    <title>Document</title>
+    <script src="jquery/jquery.js"></script>
+    <script>
+        //show and hide?
+        $(function(){
+            $("button").on("click",function(){
+                let panelId = $(this).attr("data-panelId")
+                $(panelId).slideToggle(400).slideToggle(300)
+            })
+        })
+    </script>
+</head>
+<body>
+    
+    <div class="buttons">
+        <button id="butt1" data-panelId="#panel1">#butt1</button>
+        <button id="butt2" data-panelId="#panel2">#butt2</button>
+        <button id="butt3" data-panelId="#panel3">#butt3</button>
+        <button id="butt4" data-panelId="#panel4">#butt4</button>
+    </div> 
+    <div class="panels">
+        <div id="panel1">Content</div>        
+        <div id="panel2">Content</div>        
+        <div id="panel3">Content</div>        
+        <div id="panel4">Content</div>        
+    </div>
+
+</body>
+</html>
